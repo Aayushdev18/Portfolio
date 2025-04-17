@@ -57,8 +57,17 @@ const Single = ({ item }) => {
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
             <div className="buttons">
-              <button onClick={() => window.open(item.deployLink, "_blank")}>Deploy Link</button>
-              <button onClick={() => window.open(item.githubLink, "_blank")}>GitHub Link</button>
+              <button
+                className="deployButton"
+                onClick={() => window.open(item.deployLink, "_blank")}
+              >
+                Deploy Link
+              </button>
+              <button
+                onClick={() => window.open(item.githubLink, "_blank")}
+              >
+                GitHub Link
+              </button>
             </div>
           </motion.div>
         </div>
