@@ -1,86 +1,109 @@
+// Reusing hero theme colors
+$primary-dark: #0f2027;
+$secondary-dark: #203a43;
+$accent-mint: #00c9a7;
+$text-light: #fdfdfd;
+$text-muted: gray;
+
 .services {
-    background: linear-gradient(180deg, #0c0c1d, #111132);
-    height: 100%;
+  background: linear-gradient(180deg, $primary-dark, $secondary-dark);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .textContainer {
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    p {
+      font-weight: 200;
+      font-size: 20px;
+      color: $text-muted;
+      text-align: right;
+    }
+
+    hr {
+      width: 500px;
+      border: none;
+      border-top: 0.5px solid $text-muted;
+    }
+  }
+
+  .titleContainer {
+    flex: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
 
-    .textContainer { // fixed: was ".textContiner"
-        flex: 1;
-        align-self: flex-end;
-        display: flex;
-        align-items: center;
-        gap: 20px;
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 50px;
 
-        p{
-            font-weight: 200;
-            font-size: 20px;
-            color: gray;
-            text-align: right;
+      img {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        object-fit: cover;
+      }
+
+      h1 {
+        font-size: 96px;
+        font-weight: 100;
+        color: $text-light;
+      }
+
+      button {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: $accent-mint;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: white;
+          color: $accent-mint;
         }
-
-        hr{
-            width: 500px;
-            border: none;
-            border-top: 0.5px solid gray;
-        }
+      }
     }
+  }
 
-    .titleContainer { // fixed: was ".ttileContainer"
-        flex: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  .listContainer {
+    flex: 2;
+    display: flex;
+    max-width: 1366px;
+    margin: auto;
 
-        .title {
-            display: flex;
-            align-items: center;
-            gap: 50px;
+    .box {
+      flex: 1;
+      padding: 50px;
+      border: 0.5px solid $text-muted;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: $text-light;
 
-            img {
-                width: 300px;
-                height: 100px;
-                border-radius: 50px;
-                object-fit: cover;
-            }
+      button {
+        padding: 10px;
+        background-color: $accent-mint;
+        border: none;
+        cursor: pointer;
+        color: white;
+        transition: all 0.3s ease;
 
-            h1 {
-                font-size: 96px;
-                font-weight: 100;
-            }
-
-            button {
-                width: 300px;
-                height: 100px;
-                border-radius: 50px;
-                background-color: orange;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-            }
+        &:hover {
+          background-color: white;
+          color: $accent-mint;
         }
+      }
     }
-
-    .listContainer {
-        flex: 2;
-        display: flex;
-        max-width: 1366px;
-        margin: auto;
-
-        .box {
-            flex: 1; // Optional: ensures boxes take equal space
-            padding: 50px;
-            border: 0.5px solid gray;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            button {
-                padding: 10px;
-                background-color: orange;
-                border: none;
-                cursor: pointer;
-            }
-        }
-    }
+  }
 }

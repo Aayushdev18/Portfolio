@@ -1,52 +1,66 @@
+$primary-dark: #0f2027;
+$secondary-dark: #203a43;
+$accent-mint: #00c9a7;
+$text-light: #fdfdfd;
+
 .contact {
-    height: 100%;
-    max-width: 1366px;
-    margin: auto;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, $primary-dark, $secondary-dark);
+
+  .textContainer {
+    flex: 1;
     display: flex;
-    align-items: center;
-    gap: 50px;
-  
-    .textContainer {
-      flex: 1;
+    flex-direction: column;
+    gap: 40px;
+
+    h1 {
+      font-size: 100px;
+      line-height: 88px;
+      color: $text-light;
+    }
+
+    span {
+      font-weight: 800;
+      color: $text-light;
+    }
+  }
+
+  .formContainer {
+    flex: 1;
+
+    form {
       display: flex;
       flex-direction: column;
-      gap: 40px;
-  
-      h1 {
-        font-size: 100px;
-        line-height: 88px;
+      gap: 20px;
+
+      input,
+      textarea {
+        padding: 20px;
+        background-color: transparent;
+        border: 1px solid $text-light;
+        color: $text-light;
+        border-radius: 5px;
       }
-  
-      span {
-        font-weight: 800;
-      }
-    }
-  
-    .formContainer {
-      flex: 1;
-  
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-  
-        input,
-        textarea {
-          padding: 20px;
-          background-color: transparent;
-          border: 1px solid white;
-          color: white;
-          border-radius: 5px;
-        }
-  
-        button {
-          padding: 20px;
-          border: none;
-          background-color: orange;
-          cursor: pointer;
-          font-weight: 500;
+
+      button {
+        padding: 20px;
+        border: none;
+        background-color: $accent-mint;
+        color: white;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: white;
+          color: $accent-mint;
         }
       }
     }
   }
-  
+}

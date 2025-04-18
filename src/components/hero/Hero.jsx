@@ -86,7 +86,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        Writer Content Creator Influence
+        Developer
       </motion.div>
 
       <div className="imageContainer">

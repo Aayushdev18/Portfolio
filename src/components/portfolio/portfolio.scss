@@ -1,5 +1,14 @@
+
+$primary-dark: #0f2027;
+$secondary-dark: #203a43;
+$accent-mint: #00c9a7;
+$text-light: #fdfdfd;
+$text-muted: gray;
+
 .portfolio {
   position: relative;
+  background: linear-gradient(180deg, $primary-dark, $secondary-dark);
+  color: $text-light;
 
   .progress {
     position: sticky;
@@ -7,8 +16,9 @@
     left: 0;
     padding-top: 50px;
     text-align: center;
-    color: orange;
+    color: $accent-mint;
     font-size: 36px;
+    background: linear-gradient(180deg, $primary-dark, $secondary-dark); 
 
     .progressBar {
       height: 10px;
@@ -55,30 +65,37 @@
 
         h2 {
           font-size: 72px;
+          color: $text-light;
         }
 
         p {
-          color: gray;
+          color: $text-muted;
           font-size: 20px;
         }
 
         .buttons {
           display: flex;
-          justify-content: flex-end; // Align both buttons to the right
+          justify-content: flex-end;
           gap: 20px;
         }
 
         button {
-          background-color: orange;
+          background-color: $accent-mint;
           border: none;
           border-radius: 10px;
           padding: 10px;
           width: 200px;
           cursor: pointer;
           font-weight: bold;
+          color: white;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: white;
+            color: $accent-mint;
+          }
         }
 
-        // Custom styling for the deploy button
         .deployButton {
           margin-right: 250px;
         }
